@@ -106,4 +106,5 @@ window.POLYCEA_WORDS = [
   "Suivi d'activité",
   "Croissantage",
   "#sysadmin",
+  "100% de clients satisfaits",
 ];
