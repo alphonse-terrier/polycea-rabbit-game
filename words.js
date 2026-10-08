@@ -107,4 +107,10 @@ window.POLYCEA_WORDS = [
   "Croissantage",
   "#sysadmin",
   "100% de clients satisfaits",
+  "DevOps",
+  "IA",
+  "Vivendi",
+  "Welcome to the Jungle",
+  "Gitlab",
+  "Upward feedback",
 ];
