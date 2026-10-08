@@ -113,4 +113,5 @@ window.POLYCEA_WORDS = [
   "Welcome to the Jungle",
   "Gitlab",
   "Upward feedback",
+  "Concours photo",
 ];
