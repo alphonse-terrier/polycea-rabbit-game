@@ -100,4 +100,10 @@ window.POLYCEA_WORDS = [
   "Bar à jeux",
   "Sushi",
   "Turbot",
+  "BizLunch",
+  "TechLunch",
+  "Fais ton CV",
+  "Suivi d'activité",
+  "Croissantage",
+  "#sysadmin",
 ];
