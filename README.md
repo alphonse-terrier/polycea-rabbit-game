@@ -4,7 +4,7 @@ Jeu de devinettes mobile, dans le navigateur, façon « jeu des lapins » / Head
 
 ## Comment jouer
 
-1. Ouvrez le site sur votre téléphone et choisissez la durée (60, 90 ou 120 s).
+1. Ouvrez le site sur votre téléphone et choisissez la durée (30, 60, 90 ou 120 s).
 2. Touchez **Jouer**. Sur iPhone, acceptez l'accès aux capteurs de mouvement.
 3. Tournez le téléphone en paysage et posez-le sur votre front, écran vers vos coéquipiers.
 4. Ils vous font deviner le mot affiché :
