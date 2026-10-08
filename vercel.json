@@ -1,0 +1,10 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Permissions-Policy", "value": "accelerometer=(self), gyroscope=(self), screen-wake-lock=(self)" }
+      ]
+    }
+  ]
+}

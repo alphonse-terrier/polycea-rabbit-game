@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Polycea – Le jeu des accolades</title>
+  <meta name="description" content="Le jeu de devinettes Polycea : téléphone sur le front, baissez pour valider, levez pour passer.">
+  <meta name="theme-color" content="#00241b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Polycea Game">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accueil -->
+  <section id="screen-home" class="screen active">
+    <div class="home">
+      <img class="logo" src="assets/logo.svg" alt="polycea">
+      <h1><span class="acc">{</span> Devine qui&nbsp;? <span class="acc">}</span></h1>
+      <p class="tagline">Le jeu de devinettes 100&nbsp;% Polycea</p>
+
+      <div class="rules">
+        <div class="rule"><span class="pill pill-green">↓</span><span>Baissez le téléphone<br><b>= trouvé</b></span></div>
+        <div class="rule"><span class="pill pill-violet">↑</span><span>Levez le téléphone<br><b>= passer</b></span></div>
+      </div>
+
+      <div class="durations" role="radiogroup" aria-label="Durée de la manche">
+        <button class="duration" data-duration="60" role="radio">60&nbsp;s</button>
+        <button class="duration selected" data-duration="90" role="radio">90&nbsp;s</button>
+        <button class="duration" data-duration="120" role="radio">120&nbsp;s</button>
+      </div>
+
+      <button id="btn-play" class="btn-primary">Jouer</button>
+      <p class="hint">Placez le téléphone sur votre front, écran vers vos coéquipiers.<br>Ils vous font deviner le mot affiché&nbsp;!</p>
+      <p id="sensor-warning" class="warning" hidden></p>
+    </div>
+  </section>
+
+  <!-- Placement / compte à rebours -->
+  <section id="screen-ready" class="screen">
+    <div class="center">
+      <p id="ready-text" class="ready-text">Placez le téléphone<br>sur votre front</p>
+      <div id="countdown" class="countdown" hidden>3</div>
+    </div>
+  </section>
+
+  <!-- Jeu -->
+  <section id="screen-game" class="screen">
+    <div class="topbar">
+      <span id="timer" class="timer">90</span>
+      <span id="score-live" class="score-live">0</span>
+    </div>
+    <div class="center">
+      <div id="word" class="word">…</div>
+    </div>
+    <div class="feedback" id="feedback"></div>
+    <!-- Contrôles tactiles de secours (et pour tester sur ordinateur) -->
+    <button class="tap-zone tap-pass" id="tap-pass" aria-label="Passer"></button>
+    <button class="tap-zone tap-ok" id="tap-ok" aria-label="Trouvé"></button>
+  </section>
+
+  <!-- Résultats -->
+  <section id="screen-end" class="screen">
+    <div class="end">
+      <p class="end-label">Temps écoulé&nbsp;!</p>
+      <div class="end-score"><span class="acc">{</span><span id="final-score">0</span><span class="acc">}</span></div>
+      <p id="end-sub" class="end-sub">mots trouvés</p>
+      <ul id="recap" class="recap"></ul>
+      <div class="end-actions">
+        <button id="btn-replay" class="btn-primary">Rejouer</button>
+        <button id="btn-home" class="btn-secondary">Accueil</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overlay orientation -->
+  <div id="rotate" class="rotate" hidden>
+    <div class="rotate-phone"></div>
+    <p>Tournez votre téléphone<br>en mode paysage</p>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
